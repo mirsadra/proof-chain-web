@@ -1,0 +1,5 @@
+.DS_Store
+*.swp
+.env
+supabase/beta_signups.sql
+supabase/functions/beta-signup/index.ts

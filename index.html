@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proof Chain - Beta Released | Parkinsad Ltd</title>
+    <title>Proof - Beta Released | Parkinsad Ltd</title>
+    <meta name="description" content="Proof is the cryptographic proof-of-visit standard. Verify reality, secure your presence. Now available on iPhone and iPad via TestFlight.">
+    <link rel="icon" type="image/png" href="icon.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proof — Cryptographic Proof of Visit">
+    <meta property="og:description" content="Verify reality. Secure your presence. The cryptographic proof-of-visit app for iPhone and iPad.">
+    <meta property="og:image" content="https://proofapp.site/icon.png">
+    <meta property="og:url" content="https://proofapp.site/">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Proof — Cryptographic Proof of Visit">
+    <meta name="twitter:description" content="Verify reality. Secure your presence. Now on TestFlight.">
+    <meta name="twitter:image" content="https://proofapp.site/icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +26,13 @@
             theme: {
                 extend: {
                     colors: {
-                        // Your Custom Palette
-                        myBlack: '#09090B',
+                        myBlack: '#0B0B0B',
                         myWhite: '#FAFAFA',
-                        myBlue: '#1447E5',
+                        myBlue: '#147AE5',
                         myDarkGreen: '#06402B',
-                        myGreen: '#5DA500',
-                        myRed: '#FB2B37',
+                        myGreen: '#5CA600',
+                        myRed: '#FB362B',
+                        myOrange: '#FF6900',
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
@@ -38,7 +51,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #09090B; /* myBlack */
+            background-color: #0B0B0B; /* myBlack */
             color: #FAFAFA; /* myWhite */
             overflow-x: hidden;
         }
@@ -48,7 +61,7 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background-image:
-                radial-gradient(circle at 50% 0%, rgba(20, 71, 229, 0.15), transparent 40%);
+                radial-gradient(circle at 50% 0%, rgba(20, 122, 229, 0.15), transparent 40%);
             z-index: -1;
         }
 
@@ -62,7 +75,7 @@
 
         .glass-card:hover {
             background: rgba(250, 250, 250, 0.06);
-            border: 1px solid rgba(20, 71, 229, 0.4); /* myBlue border on hover */
+            border: 1px solid rgba(20, 122, 229, 0.4); /* myBlue border on hover */
             transform: translateY(-5px);
         }
 
@@ -73,7 +86,7 @@
             overflow: hidden;
             position: relative;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-            background: #09090B;
+            background: #0B0B0B;
         }
         
         .phone-notch {
@@ -107,16 +120,27 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
-                        <span class="text-2xl font-bold text-myWhite tracking-tight">Proof Chain</span>
+                        <span class="text-2xl font-bold text-myWhite tracking-tight">Proof</span>
                         <span class="ml-2 px-2 py-0.5 rounded text-[10px] font-bold bg-myWhite/10 text-myWhite border border-myWhite/20">BETA</span>
                     </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-8">
-                            <a href="#showcase" class="text-sm font-medium text-myWhite/60 hover:text-myWhite transition-colors">App Tour</a>
-                            <a href="#pricing" class="text-sm font-medium text-myWhite/60 hover:text-myWhite transition-colors">Pricing</a>
-                            <a href="#beta-access" class="px-4 py-2 rounded-full text-sm font-semibold bg-myWhite text-myBlack hover:bg-myWhite/90 transition-colors">Get Beta Access</a>
-                        </div>
+                    <div class="hidden md:flex items-baseline space-x-8">
+                        <a href="#showcase" class="text-sm font-medium text-myWhite/60 hover:text-myWhite transition-colors">App Tour</a>
+                        <a href="#pricing" class="text-sm font-medium text-myWhite/60 hover:text-myWhite transition-colors">Pricing</a>
+                        <a href="#beta-access" class="px-4 py-2 rounded-full text-sm font-semibold bg-myWhite text-myBlack hover:bg-myWhite/90 transition-colors">Get Beta Access</a>
                     </div>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-myWhite/60 hover:text-myWhite transition-colors" aria-label="Open menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden border-t border-myWhite/10 bg-myBlack/95 backdrop-blur-lg">
+                <div class="px-4 py-4 space-y-3">
+                    <a href="#showcase" class="block text-sm font-medium text-myWhite/60 hover:text-myWhite transition-colors py-2">App Tour</a>
+                    <a href="#pricing" class="block text-sm font-medium text-myWhite/60 hover:text-myWhite transition-colors py-2">Pricing</a>
+                    <a href="#beta-access" class="block w-full text-center px-4 py-2.5 rounded-full text-sm font-semibold bg-myWhite text-myBlack hover:bg-myWhite/90 transition-colors">Get Beta Access</a>
                 </div>
             </div>
         </nav>
@@ -171,7 +195,7 @@
                             </p>
                             <p>
                                 <strong class="text-myWhite">For Customers:</strong> 
-                                Proof Chain works best when your local spots are onboard. If your favorite cafe or store isn't on Proof Chain yet, ask them to join the beta!
+                                Proof works best when your local spots are onboard. If your favorite cafe or store isn't on Proof yet, ask them to join the beta!
                             </p>
                             <div class="pt-4 flex items-center gap-4">
                                 <span class="inline-flex items-center gap-2 bg-myWhite/5 px-3 py-1.5 rounded-lg border border-myWhite/10">
@@ -193,7 +217,7 @@
                             <div class="animate-float">
                                 <div class="w-[240px] sm:w-[280px] phone-mockup" style="transform: rotate(-6deg);">
                                     <div class="phone-notch"></div>
-                                    <img src="Simulator Screenshot - iPhone 13 Pro Max (6.5&quot;) - 2026-02-07 at 17.19.01.png" alt="Business Dashboard" class="w-full h-auto block">
+                                    <img src="screenshot-dashboard.png" alt="Business Dashboard" class="w-full h-auto block">
                                 </div>
                             </div>
                         </div>
@@ -202,7 +226,7 @@
                             <div class="animate-float-delayed">
                                 <div class="w-[240px] sm:w-[280px] phone-mockup" style="transform: rotate(6deg);">
                                     <div class="phone-notch"></div>
-                                    <img src="IMG_3454.png" alt="Visit History" class="w-full h-auto block">
+                                    <img src="screenshot-history.png" alt="Visit History" class="w-full h-auto block">
                                 </div>
                             </div>
                         </div>
@@ -245,7 +269,7 @@
                         <a href="#beta-access" class="block w-full py-3 px-6 text-center rounded-xl bg-myWhite/10 text-myWhite font-semibold hover:bg-myWhite/20 transition-colors">Start Free</a>
                     </div>
 
-                    <div class="glass-card p-8 rounded-3xl border-myBlue/50 relative overflow-hidden fade-in" style="background: linear-gradient(145deg, rgba(20, 71, 229, 0.1), rgba(0,0,0,0));">
+                    <div class="glass-card p-8 rounded-3xl border-myBlue/50 relative overflow-hidden fade-in" style="background: linear-gradient(145deg, rgba(20, 122, 229, 0.1), rgba(0,0,0,0));">
                         <div class="absolute top-0 right-0 bg-myBlue text-xs font-bold px-3 py-1 rounded-bl-xl text-myWhite">RECOMMENDED</div>
                         <h3 class="text-xl font-semibold text-myWhite">Professional</h3>
                         <p class="mt-2 text-sm text-myWhite/60">For businesses serious about loyalty.</p>
@@ -298,7 +322,7 @@
                         We’re Raising to Ship <span class="text-myBlue">Physical Proof</span>
                     </h2>
                     <p class="mt-6 max-w-3xl mx-auto text-lg text-myWhite/60">
-                        Proof Chain is expanding from software into hardware — a dedicated desk device for cafés and retailers
+                        Proof is expanding from software into hardware — a dedicated desk device for cafés and retailers
                         that displays cryptographic verification states in real time and syncs instantly with our iOS app.
                     </p>
                 </div>
@@ -342,14 +366,14 @@
         
                 <!-- Funding ask -->
                 <div class="glass-card p-12 rounded-3xl max-w-4xl mx-auto text-center fade-in"
-                     style="background: linear-gradient(160deg, rgba(20,71,229,0.15), rgba(0,0,0,0));">
+                     style="background: linear-gradient(160deg, rgba(20,122,229,0.15), rgba(0,0,0,0));">
         
                     <h3 class="text-3xl font-bold text-myWhite mb-4">
                         Funding Target: £40,000 – £60,000
                     </h3>
         
                     <p class="text-myWhite/70 max-w-2xl mx-auto mb-10">
-                        This pre-seed round enables Proof Chain to move from beta software
+                        This pre-seed round enables Proof to move from beta software
                         to a revenue-generating hardware + SaaS platform for hospitality businesses.
                     </p>
         
@@ -370,7 +394,7 @@
         
                     <!-- CTA buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="mailto:founder@proofapp.site?subject=Proof Chain Investment Enquiry"
+                        <a href="mailto:founder@proofapp.site?subject=Proof Investment Enquiry"
                            class="px-8 py-4 rounded-xl bg-myBlue text-myWhite font-bold text-lg hover:opacity-90 transition-opacity">
                             Contact Founder
                         </a>
@@ -397,13 +421,14 @@
                         We are currently inviting users to test the app via Apple TestFlight. Enter your Apple ID email below to receive an invitation code.
                     </p>
                     
-                    <form class="max-w-md mx-auto flex gap-2 flex-col sm:flex-row mb-8" onsubmit="event.preventDefault(); alert('Thank you! You have been added to the waitlist.');">
-                        <input type="email" placeholder="your@email.com" required class="flex-1 bg-myWhite/10 border border-myWhite/20 rounded-lg px-4 py-3 text-myWhite placeholder-myWhite/30 focus:outline-none focus:border-myBlue">
-                        <button type="submit" class="bg-myWhite text-myBlack font-bold px-6 py-3 rounded-lg hover:bg-myWhite/90 transition-colors">
+                    <form id="beta-form" class="max-w-md mx-auto flex gap-2 flex-col sm:flex-row mb-4">
+                        <input id="beta-email" type="email" placeholder="your@email.com" required class="flex-1 bg-myWhite/10 border border-myWhite/20 rounded-lg px-4 py-3 text-myWhite placeholder-myWhite/30 focus:outline-none focus:border-myBlue">
+                        <button id="beta-btn" type="submit" class="bg-myWhite text-myBlack font-bold px-6 py-3 rounded-lg hover:bg-myWhite/90 transition-colors">
                             Request Invite
                         </button>
                     </form>
-                    <p class="text-xs text-myWhite/40">By submitting, you agree to receive beta updates from Proof Chain.</p>
+                    <p id="beta-msg" class="text-sm mb-4 hidden"></p>
+                    <p class="text-xs text-myWhite/40">By submitting, you agree to receive beta updates from Proof.</p>
                 </div>
 
                 <div id="support" class="mt-16 fade-in">
@@ -412,7 +437,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-myWhite mb-4">Help Us Register Parkinsad Ltd.</h3>
                     <p class="text-myWhite/60 max-w-xl mx-auto mb-8">
-                        Proof Chain is developed by <strong>Parkinsad Ltd</strong> (currently pending registration). We are a bootstrapped startup seeking funding to cover legal registration fees and server costs.
+                        Proof is developed by <strong>Parkinsad Ltd</strong> (currently pending registration). We are a bootstrapped startup seeking funding to cover legal registration fees and server costs.
                     </p>
                     
                     <a href="https://buymeacoffee.com/mirsadra" target="_blank" class="inline-flex items-center gap-3 bg-[#FFDD00] text-black px-6 py-3 rounded-lg font-bold hover:bg-[#ffea00] transition-colors transform hover:scale-105 duration-200">
@@ -427,13 +452,13 @@
 
     <footer class="border-t border-myWhite/10 mt-20 bg-myBlack/40">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xl font-bold text-myWhite tracking-tight">Proof Chain</p>
+            <p class="text-xl font-bold text-myWhite tracking-tight">Proof</p>
             <p class="mt-2 text-sm text-myWhite/50">A product of Parkinsad Ltd. (Pending Registration)</p>
             <p class="text-xs text-myWhite/40 mt-1">United Kingdom</p>
             
             <div class="mt-8 flex justify-center space-x-8">
-                <a href="#" class="text-sm text-myWhite/50 hover:text-myWhite transition-colors">Privacy</a>
-                <a href="#" class="text-sm text-myWhite/50 hover:text-myWhite transition-colors">Terms</a>
+                <a href="privacy-policy.html" class="text-sm text-myWhite/50 hover:text-myWhite transition-colors">Privacy</a>
+                <a href="privacy-policy.html" class="text-sm text-myWhite/50 hover:text-myWhite transition-colors">Terms</a>
                 <a href="mailto:support@proofapp.site" class="text-sm text-myWhite/50 hover:text-myWhite transition-colors">Contact</a>
             </div>
             
@@ -444,6 +469,28 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.setAttribute('d', isOpen
+                ? 'M4 6h16M4 12h16M4 18h16'
+                : 'M6 18L18 6M6 6l12 12'
+            );
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+
         // Intersection Observer for fade-in animations
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = {
@@ -460,6 +507,47 @@
 
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
+        });
+
+        // Beta signup form
+        const betaForm = document.getElementById('beta-form');
+        const betaEmail = document.getElementById('beta-email');
+        const betaBtn = document.getElementById('beta-btn');
+        const betaMsg = document.getElementById('beta-msg');
+
+        betaForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            betaBtn.disabled = true;
+            betaBtn.textContent = 'Submitting...';
+            betaMsg.classList.add('hidden');
+
+            try {
+                const res = await fetch('https://auth.proofapp.site/functions/v1/beta-signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: betaEmail.value }),
+                });
+
+                const data = await res.json();
+
+                if (res.ok) {
+                    betaMsg.textContent = 'You\'re on the list! We\'ll send your TestFlight invite soon.';
+                    betaMsg.className = 'text-sm mb-4 text-myGreen';
+                    betaForm.reset();
+                } else if (res.status === 409) {
+                    betaMsg.textContent = 'You\'re already on the waitlist — we\'ll be in touch!';
+                    betaMsg.className = 'text-sm mb-4 text-myBlue';
+                } else {
+                    betaMsg.textContent = data.error || 'Something went wrong. Please try again.';
+                    betaMsg.className = 'text-sm mb-4 text-myRed';
+                }
+            } catch {
+                betaMsg.textContent = 'Network error. Please check your connection and try again.';
+                betaMsg.className = 'text-sm mb-4 text-myRed';
+            } finally {
+                betaBtn.disabled = false;
+                betaBtn.textContent = 'Request Invite';
+            }
         });
     </script>
 </body>

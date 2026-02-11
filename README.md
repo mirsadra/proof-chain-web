@@ -1,72 +1,54 @@
-# ProofVisit Website
+# Proof — Marketing Website
 
-Official website for ProofVisit - a cryptographic visit verification iOS app.
+Official website for **Proof**, a cryptographic visit verification app for iOS and iPad.
 
-<div align="center">
-  <img src="icon.png" alt="ProofVisit App Icon" width="1920" height="1280" style="border-radius: 20px;">
-  <h1>ProofVisit Website</h1>
-</div>
+**Live at:** [https://proofapp.site](https://proofapp.site)
 
-## About ProofVisit
+## About Proof
 
-ProofVisit is an iOS application that provides cryptographic proof of business visits using QR codes and secure verification. The app enables customers to prove their presence at businesses while maintaining privacy through device-based anonymity.
+Proof lets customers cryptographically prove they visited a business — no accounts, no personal data. Business owners get real-time analytics, loyalty insights, and a privacy-first verification system powered by QR codes and HMAC-SHA256 signatures.
 
 ### Key Features
 
-- **Cryptographic Security**: SHA-256 hash generation for tamper-proof visit verification
-- **QR Code Scanning**: Real-time business lookup and verification
-- **Business Analytics**: Visit tracking and trend analysis for business owners
-- **Privacy First**: No personal data collection or account requirements
-- **Automatic Word Rotation**: Configurable verification word management
-- **Visit History**: Shareable cryptographic proofs of customer loyalty
+- **Cryptographic Verification** — SHA-256 signed visit proofs, tamper-proof and shareable
+- **QR Code Scanning** — Instant business lookup and visit recording
+- **Business Analytics** — Real-time dashboard with visit trends and customer patterns
+- **Privacy First** — Customers need no account; all visit data stays on-device
+- **Auto-rotating Words** — Configurable verification word management for businesses
+- **iPad Kiosk Mode** — Dedicated counter display for businesses
 
-### Technology Stack
+### Tech Stack (iOS App)
 
-- **Frontend**: Swift 6.2, SwiftUI, SwiftData
-- **Security**: CryptoKit, SHA-256 hashing
-- **Backend**: Firebase Firestore, Firebase Auth
-- **Charts**: Swift Charts framework
-- **QR Codes**: Core Image, AVFoundation
+- **Frontend:** Swift 6.2, SwiftUI, SwiftData
+- **Security:** CryptoKit, HMAC-SHA256
+- **Backend:** Supabase (Auth, Postgres, Edge Functions)
+- **Payments:** StoreKit 2
+- **QR:** Core Image, AVFoundation
 
-## Development Status
+## Status
 
-Current progress: **75% Complete**
+**Beta live on TestFlight.** Request an invite at [proofapp.site](https://proofapp.site).
 
-- ✅ QR Code Generation & Scanning
-- ✅ Cryptographic Hash Generation
-- ✅ Firebase Integration
-- ✅ Business Analytics Dashboard
-- ✅ Visit History & Sharing
-- 🔄 Polish & Testing
-- ⏳ App Store Submission
+## This Repository
 
-## Website
+Source code for the Proof marketing website:
 
-This repository contains the source code for the ProofVisit marketing website, built with:
-
-- HTML5 & CSS3
-- Tailwind CSS
+- HTML5 with Tailwind CSS (CDN)
 - Vanilla JavaScript
-- GitHub Pages hosting
+- Hosted on GitHub Pages with custom domain
 
-## Local Development
+### Local Development
 
 1. Clone this repository
 2. Open `index.html` in your browser
-3. Make changes to HTML/CSS files
-4. Commit and push to deploy via GitHub Pages
+3. Edit HTML files directly — Tailwind is loaded via CDN
 
 ## Links
 
-- **Website**: [https://mirsadra.github.io/proofvisit-app](https://mirsadra.github.io/proofvisit-app)
-- **Developer**: [@mirsadra](https://github.com/mirsadra)
-
-## Contact
-
-- **X (Twitter)**: [@Mirsadraa](https://x.com/Mirsadraa)
-- **Mastodon**: [@mirsadra@mastodon.social](https://mastodon.social/@mirsadra)
-- **GitHub**: [@mirsadra](https://github.com/mirsadra)
+- **Website:** [https://proofapp.site](https://proofapp.site)
+- **Developer:** [@mirsadra](https://github.com/mirsadra)
+- **X (Twitter):** [@Mirsadraa](https://x.com/Mirsadraa)
 
 ---
 
-**Note**: The iOS app is currently in development and not yet available on the App Store.
+Built by [Parkinsad Ltd](https://proofapp.site) (UK)

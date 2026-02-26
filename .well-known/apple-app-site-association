@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["G9QU83M3D9.com.blockchain.Proof"],
+        "components": [
+          {
+            "/": "/auth/callback",
+            "comment": "Handles Supabase auth redirects"
+          }
+        ]
+      }
+    ]
+  }
+}

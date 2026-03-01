@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting to Proof Chain...</title>
+  <title>Proof Chain – Authentication</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -18,20 +18,16 @@
     .container {
       text-align: center;
       padding: 2rem;
+      max-width: 360px;
     }
     h1 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
-    p  { font-size: 0.9rem; color: #666; }
+    p  { font-size: 0.9rem; color: #666; line-height: 1.5; }
   </style>
-  <script>
-    // Pass query params through to the app via custom scheme fallback
-    const params = window.location.search;
-    window.location.replace("proof-visit://auth/callback" + params);
-  </script>
 </head>
 <body>
   <div class="container">
-    <h1>Redirecting to Proof Chain…</h1>
-    <p>If the app doesn't open, please return to it manually.</p>
+    <h1>Authentication Complete</h1>
+    <p>You can return to the Proof Chain app now. This page can be closed.</p>
   </div>
 </body>
 </html>

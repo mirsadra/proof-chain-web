@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Proof</title>
-    <meta name="description" content="Privacy Policy for Proof, the cryptographic proof-of-visit app. Learn how we protect your data with privacy-by-design principles.">
+    <meta name="description" content="Privacy Policy for Proof, a secure visit verification app. Learn how we protect your data with privacy-by-design principles.">
     <link rel="icon" type="image/png" href="icon.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Privacy Policy - Proof">
@@ -147,7 +147,7 @@
 
                 <div class="prose max-w-none">
                     <p class="text-lg">
-                        Welcome to <strong>Proof</strong>. We are committed to protecting your privacy while providing a secure, cryptographically verified loyalty experience. This Privacy Policy explains how we handle information across our iOS application and our website (<a href="https://proofapp.site">https://proofapp.site</a>).
+                        Welcome to <strong>Proof</strong>. We are committed to protecting your privacy while providing a secure loyalty experience. This Privacy Policy explains how we handle information across our iOS application and our website (<a href="https://proofapp.site">https://proofapp.site</a>).
                     </p>
 
                     <h2>1. Our "Privacy by Design" Philosophy</h2>
@@ -161,17 +161,17 @@
 
                     <h3>A. Customer Data (App Users)</h3>
                     <ul>
-                        <li><strong>Locally Stored Data:</strong> All records of your visits, timestamps, and business interactions are stored exclusively in your device's local storage (SwiftData). We do not have access to this data.</li>
-                        <li><strong>Device Identifier:</strong> A unique, device-bound cryptographic key is generated on your iPhone to sign your visits. This key remains in your iOS Keychain.</li>
+                        <li><strong>Locally Stored Data:</strong> All records of your visits, timestamps, and business interactions are stored exclusively in your iPhone's local storage. We do not have access to this data.</li>
+                        <li><strong>Device Identifier:</strong> A unique, secure key is generated on your iPhone to verify your visits. This key is stored securely on your device and is never sent to us. To learn more about how Apple protects this information, visit <a href="https://developer.apple.com/documentation/security/keychain-services">Apple's security documentation</a>.</li>
                         <li><strong>Customer Alias:</strong> If you choose to create an alias (e.g., "Coffee Lover"), this is stored locally and is not linked to your real identity.</li>
                     </ul>
 
                     <h3>B. Business Owner Data</h3>
                     <p>To provide business management services, we collect:</p>
                     <ul>
-                        <li><strong>Account Information:</strong> Email address and authentication details provided via Supabase Auth (including OAuth providers if used).</li>
+                        <li><strong>Account Information:</strong> Email address and login details provided through secure authentication services.</li>
                         <li><strong>Business Details:</strong> Name, location, and customisation preferences for your business profile.</li>
-                        <li><strong>Subscription Data:</strong> Transaction history and subscription status managed via Apple StoreKit 2. We do not see or store your credit card details.</li>
+                        <li><strong>Subscription Data:</strong> Transaction history and subscription status. We do not see or store your credit card details.</li>
                     </ul>
 
                     <h3>C. Staff Data</h3>
@@ -184,23 +184,23 @@
 
                     <h2>3. How We Use Your Information</h2>
                     <ul>
-                        <li><strong>To Provide the Service:</strong> Using cryptographic signatures to verify physical presence.</li>
+                        <li><strong>To Provide the Service:</strong> Using secure verification to confirm your visits.</li>
                         <li><strong>Analytics (Business Owners Only):</strong> Aggregating visit data so owners can understand customer patterns without identifying individual customers.</li>
                         <li><strong>Subscription Management:</strong> Processing Pro Tier features and renewals through Apple's secure infrastructure.</li>
                     </ul>
 
                     <h2>4. Data Storage and Security</h2>
                     <ul>
-                        <li><strong>Customer Data:</strong> We utilise iOS Keychain (with <code>kSecAttrAccessibleAfterFirstUnlock</code>) and SwiftData for local encryption. Because this data never leaves your device, we cannot recover it if you lose your device unless you have enabled iCloud Keychain sync.</li>
-                        <li><strong>Business Data:</strong> Business configurations and analytics are synchronised securely via Supabase (Cloud Storage).</li>
-                        <li><strong>Encryption:</strong> All visit records are verified using HMAC-SHA256 signatures to prevent tampering.</li>
+                        <li><strong>Customer Data:</strong> Your data is encrypted and stored securely on your device using Apple's security features. Because this data never leaves your device, we cannot recover it if you lose your device unless you have enabled cloud sync.</li>
+                        <li><strong>Business Data:</strong> Business configurations and analytics are stored securely on our servers with encryption.</li>
+                        <li><strong>Encryption:</strong> All visit records use advanced security codes to prevent unauthorized changes.</li>
                     </ul>
 
                     <h2>5. Data Sharing and Third Parties</h2>
                     <p>We do not sell, rent, or trade your personal data. We use a limited number of trusted service providers:</p>
                     <ul>
-                        <li><strong>Supabase:</strong> For business owner authentication and cloud synchronisation.</li>
-                        <li><strong>Apple (StoreKit 2):</strong> For processing all in-app purchases and subscriptions.</li>
+                        <li><strong>Secure Cloud Services:</strong> For business owner authentication and data storage.</li>
+                        <li><strong>Apple:</strong> For processing all in-app purchases and subscriptions.</li>
                     </ul>
 
                     <h2>6. Your Rights and Control</h2>
@@ -230,7 +230,7 @@
     <footer class="border-t border-myWhite/10 mt-auto bg-myBlack/40">
         <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-lg font-bold text-myWhite tracking-tight">Proof</p>
-            <p class="mt-2 text-sm text-myWhite/50">Built with Swift & SwiftUI | Developed by Mirsadra</p>
+            <p class="mt-2 text-sm text-myWhite/50">Developed by Mirsadra</p>
             <div class="mt-4 flex justify-center space-x-6 text-xs text-myWhite/50">
                 <a href="index.html" class="hover:text-myWhite transition-colors">Home</a>
                 <span class="text-myWhite/20">|</span>

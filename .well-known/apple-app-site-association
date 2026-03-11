@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["G9QU83M3D9.com.blockchain.Proof"],
+        "appIDs": ["G9QU83M3D9.com.parkinsad.Proof"],
         "components": [
           {
             "/": "/auth/callback",
